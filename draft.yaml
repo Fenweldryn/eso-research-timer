@@ -1,0 +1,18 @@
+models:
+  Character:
+    name: string
+    user_id: id foreign
+    relationships:
+      belongsTo: User
+
+  Research:
+    craft: string
+    completesAt: timestamp
+    character_id: id foreign
+    relationships:
+      belongsTo: Character
+
+controllers:
+  # ...
+
+seeders: Character, Research
